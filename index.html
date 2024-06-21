@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N vazir</title>
+    <link rel="stylesheet" href="http://cdn.font-store.ir/yekan.css">
+    <style>
+         body{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            background: rgb(94,176,255);
+background: linear-gradient(90deg, rgba(94,176,255,1) 0%, rgba(9,9,121,1) 100%);
+            font-family:"yekan", serif ;
+        }
+        .lateef-extralight {
+  font-family: "Lateef", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.lateef-light {
+  font-family: "Lateef", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lateef-regular {
+  font-family: "Lateef", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lateef-medium {
+  font-family: "Lateef", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.lateef-semibold {
+  font-family: "Lateef", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.lateef-bold {
+  font-family: "Lateef", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lateef-extrabold {
+  font-family: "Lateef", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+        #chessboard {
+            display: flex;
+            flex-wrap: wrap;
+    width: 640px; 
+    
+    color: red;
+    height: 640px;
+    margin: 20px;
+    border: 15px solid #333;
+    border-radius:10px;
+}
+.black {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+      font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+}
+.white {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;}
+    .input-group__label {
+  padding: 0 0.5em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: 0.1em;
+  color: #ccd;
+  color: rgba(255, 220, 255, 0.6);
+  cursor: pointer;
+}
+.input-group__input {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-style: none;
+  outline: none;
+  height: calc(1em + 1.6em + 0.5em);
+  width: 100%;
+  height: 30px;
+  padding: 0.8em 1em;
+  border: 0.25em solid transparent;
+  background-image:linear-gradient(90deg, rgba(94,176,255,1) 0%, rgba(9,9,121,1) 100%), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 1.8em;
+  background-size: 200% 100%;
+  transition: background-position 0.8s ease-out;
+  background-position: 100% 0;
+}
+.btn {
+
+	position: relative;
+	top: 10px;
+	left: -18px;
+	width: 100٪;
+	height: 30px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 400px;
+	z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+}
+.btn:hover a {
+	letter-spacing: 3px;
+}
+ .btn a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+	transform: skewX(45deg) translate(0);
+	transition: 0.5s;
+	filter: blur(0px);
+}
+.btn:hover a::before {
+	transform: skewX(45deg) translate(200px);
+}
+.btn::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.btn:hover::before /*lightup button*/ {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	top: -5px;
+	width: 30px;
+	height: 10px;
+
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+  
+
+}
+.btn:hover::after /*lightup button*/ {
+	top: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+        
+      
+
+    </style>
+</head>
+<body>
+    <div dir="rtl" style="color: white;">
+        <img src="https://www.jahromu.ac.ir/images/www/fa/website/site-logo/2019/1558356689-logo-header.png" alt="k">
+        <h1> محمد جواد نوروزی شاد<br> شماره دانشجویی : 40221017 <br> دانشگاه جهرم</h1>
+        <h3>الگوریتم N وزیر</h3>
+        <p>
+         در مسئله چند وزیر , وزیر می‌تواند به صورت عمودی افقی و اریب حرکت کند  <br>  ما در صفحه شطرنجی وزیرها را طوری قرار می‌دهیم  که در حالت عمودی افقی و اریب در یک خط نباشند <br> 
+ این مسئله را این مسئله را  با  
+backtracking
+ حل می‌کنیم به طوری که به صورت  درختی از حالات اولیه استفاده <br>  و بررسی می‌کنیم و اگر امیدبخش نبود در هر یک از مرحله چینش وزیر  از آن حالت که به صورت درختی آن را <br>   فرض می‌کنیم  به مرحله قبل بر می‌گردیم و حالات بعدی را بررسی می‌کنیم  تا در آخر به نتیجه اصلی برسیم .<br> 
+
+      در پیاده سازی این الگوریتم به صورت پیش فرض ماتریس n*n ما 8*8 است که در شطرنج نشان داده شده<br> اما شما می توانید بر اساس الگوریتم    ببینید ماتریس چگونه است .
+        </p>
+        
+            <input type="text" style="font-size: 14px; display: block;" id="myInput" class="input-group__input"  placeholder="  در این باکس می توانید ماتریس n*n را که به صورت پیش فرض n:8 است را تعیین کنید " />
+            <div
+    class="btn" id="btn">
+    <a href="#" >کلیک</a>
+</div>
+    </div>
+    <div id="chessboard">
+          </div> 
+
+
+
+
+
+<script>
+   
+</script>
+
+
+
+
+
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+          <script src="./Nvazir.js"></script>
+</body>
+</html>
+
+    
